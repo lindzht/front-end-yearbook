@@ -2,6 +2,7 @@ import React, {useState} from "react";
 
 
 const AddButton = ({addNewCohort}) => {
+    console.log(test)
 
     const [display, setDisplay] = useState(false)
     const [newCohortObj, setNewCohortObj] = useState ({
