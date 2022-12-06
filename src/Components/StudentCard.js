@@ -16,7 +16,6 @@ const StudentCard = ({ studentData }) => {
 return (
         <div id="student-card">
             {turnBack? 
-                
                 <div id="front-card">
                         <div id='img'>
                             { studentData.image ? 
