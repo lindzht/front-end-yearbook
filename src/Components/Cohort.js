@@ -10,7 +10,6 @@ const Cohort = ({studentData}) =>{
         <div>
             <h1>Cohort Page</h1>
             <StudentContainer studentData={studentData}  />
-            <AddStudent />
         </div>
     )
 

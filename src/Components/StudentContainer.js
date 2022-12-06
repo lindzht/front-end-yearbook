@@ -1,33 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import StudentCard from "./StudentCard";
-import StudentForm from "./StudentForm";
 
-const StudentContainer = ({studentData}) => {
+const StudentContainer = ({ studentData }) => {
+  const allStudents = studentData.map((studentData) => (
+    <StudentCard key={studentData.id} studentData={studentData} />
+  ));
+  return <div id="student-list">{allStudents}</div>;
+};
 
-  
-
- 
-    // const handleSaveClick = () => {
-
-    //     setTurnBack(false)
-    // }
-
- 
-        
-    const allStudents = studentData.map(studentData => (
-       
-        // <StudentForm handleSaveClick={handleSaveClick} />
-     <StudentCard studentData={studentData}/>
-      
-   ))
-    return (
-        <div id="student-list">
-            {allStudents}
-        </div>
-   
-        
-   )
-       
-}
-
-export default StudentContainer
+export default StudentContainer;

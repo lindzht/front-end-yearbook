@@ -5,11 +5,11 @@ import Cohort from "./Cohort";
 
 function App() {
 
-  const [cohortIndex, setCohortIndex] = useState(1)
+  const [cohortIndex, setCohortIndex] = useState("")
   const [students, setStudents] = useState([])
   const [cohorts, setCohorts] = useState([])
 
-  console.log(cohortIndex);
+
   
   //Fetch Students
   useEffect(() => {
@@ -33,24 +33,26 @@ function App() {
 
   // ADD NEW COHORT TO DATABASE
   function addNewCohort (newCohortObj){
-    fetch('http://localhost:9292/cohorts', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(newCohortObj)
-    })
-    .then(r => r.json())
-    .then (newCohortData => {
-      setCohorts([...cohorts, newCohortData]);
-    })
-}
+      fetch('http://localhost:9292/cohorts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newCohortObj)
+      })
+      .then(r => r.json())
+      .then (newCohortData => {
+        setCohorts([...cohorts, newCohortData]);
+      })
+  }
+
+
 
 
   return (
     <div>
       <LandingPage setCohortIndex={setCohortIndex} cohorts={cohorts} addNewCohort={addNewCohort}/>
-      <Cohort studentData={students} />
+      {cohortIndex !== "" ?  <Cohort studentData={students} /> : null}
     </div>
    
   );

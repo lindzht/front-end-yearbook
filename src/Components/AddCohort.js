@@ -38,24 +38,25 @@ const AddButton = ({addNewCohort}) => {
 
 
    return(
-    <div id='landing-page-button'>
+    <div id='add-cohort-form'>
         <form onSubmit = {handleSubmit}>
             {/* <label htmlFor="new-cohort">Want to add a new cohort?</label><br></br> */}
+            
             <input 
                 type="text" 
                 name="region"
-                placeholder="Region"
+                placeholder="Region (East, West, South)"
                 value={newCohortObj.region}
                 onChange={handleChange} />
              <input 
                 type="text" 
                 name="start_date"
-                placeholder="Start Date"
+                placeholder="Start Date (MM-DD-YYYY)"
                 value={newCohortObj.start_date}
                 onChange={handleChange} />
             <input 
                 type="submit" 
-                id="add-cohort" 
+                id="add-cohort-button" 
                 name="add-cohort" 
                 value="Submit" />
         </form >

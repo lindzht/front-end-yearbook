@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AddCohort from "./AddCohort";
-import Cohort from "./Cohort";
+
 
 const DropDown = ({cohortData, setCohortIndex}) => {
 
