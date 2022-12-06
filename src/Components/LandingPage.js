@@ -1,15 +1,21 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import DropDown from "./DropDown";
-import AddButton from "./AddButton";
+import AddCohort from "./AddCohort";
 
-const LandingPage = () => {
+const LandingPage = ({setCohortIndex, cohorts, addNewCohort}) => {
+
+    const [showButton, setShowButton] = useState(false);
+
+    const handleButton = ()=> {
+        setShowButton(!showButton);
+    }
 
     return(
         <div id="landing-page">
             <h1>Yearbook</h1>
-
-            <DropDown />
-            <AddButton />
+            <DropDown cohortData={cohorts} setCohortIndex={setCohortIndex}/>
+            <h5 onClick={handleButton}>Want to add a new cohort?</h5>
+            {showButton? <AddCohort addNewCohort={addNewCohort}/> : null}
         </div> 
     )
 
