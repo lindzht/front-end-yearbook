@@ -1,4 +1,4 @@
-/* APP */
+/* APP **/
 #video-background {
     position: fixed;
     right: 0;
@@ -265,7 +265,6 @@
 }
 
 
-
 #goBack {
 
     border: 2px solid black;
@@ -274,3 +273,156 @@
     height: 20px;
     width: 50px;
 }
+
+
+/* NEW: DROPDOWN */
+#cohort-drop-down input{
+    border: none;
+}
+
+/* NEW: FRONT STUDENT CARD  */
+#student-card #front-card-text div {
+    padding: 7px;
+}
+
+#student-card #front-card-text img {
+   margin-right: 5px;
+}
+
+#student-card #front-card-text button {
+    border: none;
+    width: 80px;
+    background-color: transparent;
+    color: rgb(17, 60, 232);
+    font-weight: bold;
+    font-style: italic;
+    margin: 30px 8px 0 0;
+}
+
+#student-card #front-card-text button:hover {
+    background-color: rgb(17, 60, 232);
+    color: white;
+}
+
+
+
+/* NEW: UPDATE FORM  */
+
+#back-card-form form {
+    font-size: 0.9em;
+    margin: 1em 4.8em 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-style: italic;
+}
+
+#back-card-form form input{
+    border: none;
+    padding: 0.3em;
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+#back-card-form form textarea {
+    border: none;
+    width: 100%;
+    
+}
+
+#back-card-form form input[type="submit"] {
+    border: none;
+    width: 20%;
+    background-color: rgb(160, 160, 160);
+    color: white;
+    margin-top: 5%;
+}
+
+#back-card-form form input[type="submit"]:hover {
+    background-color: rgb(17, 60, 232);
+}
+
+
+/* NEW: FOOTER:  */
+
+#footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* NEW: ADD STUDENT FORM  */
+
+#new-studentform-container{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1% 0 0 0;
+}
+
+#new-studentform-container h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 2em;
+}
+
+#new-studentform-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30em;
+    background-color: rgba(240, 248, 255, 0.777);
+    box-shadow: 1px 1px 1em rgba(152, 183, 211, 0.526);
+    padding: 1em;
+    font-style: italic;
+}
+
+#new-studentform-container form input{
+    border: none;
+    padding: 0.3em;
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+#new-studentform-container form input::placeholder{
+    font-style: italic;
+}
+
+
+#new-studentform-container form textarea {
+    border: none;
+    padding: 0.3em;
+    width: 80%;
+    margin: 3px;
+}
+
+#new-studentform-container form input[type="submit"] {
+    border: none;
+    width: 20%;
+    background-color: rgb(160, 160, 160);
+    color: white;
+    margin-top: 5%;
+}
+
+#new-studentform-container form input[type="submit"]:hover {
+    background-color: rgb(17, 60, 232);
+}
+
+.nvm-button {
+    border: none;
+    width: 20%;
+    /* margin: 0.8em; */
+    padding: 0.3em;
+    background-color: rgb(160, 160, 160);
+    color: white;
+}
+
+.nvm-button:hover {
+    background-color: rgb(17, 60, 232);
+}
+

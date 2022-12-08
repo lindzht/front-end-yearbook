@@ -1,8 +1,17 @@
 import React, {useState} from "react"; 
+import { useHistory } from "react-router-dom";
 
 import DropDown from "./DropDown";
 
-const AddStudentForm = ({handleButton, addNewStudent, cohortIndex}) => {
+const AddStudentForm = ({addNewStudent, cohortIndex, setCohortIndex, cohorts}) => {
+   
+    const history = useHistory();
+
+    const handleButton = () => {
+        setCohortIndex(1)
+        history.push(`/`) 
+        // window.history.back();
+    }
     
     const [newStudentObj, setNewStudentObj] = useState ({
             name: "",
@@ -28,7 +37,8 @@ const AddStudentForm = ({handleButton, addNewStudent, cohortIndex}) => {
             cohort_id: cohortIndex,
         })
         addNewStudent(newStudentObj)
-        handleButton();
+        setCohortIndex(1)
+        history.push(`/`) 
     };
 
     const handleChange = (e) => {
@@ -41,8 +51,13 @@ const AddStudentForm = ({handleButton, addNewStudent, cohortIndex}) => {
         });
     };
 
+    console.log(cohorts[cohortIndex -2 ])
   return (
-    <div>
+    <div id="new-studentform-container">
+        { cohorts[cohortIndex -2] ? 
+            <h3>Add new student to {cohorts[cohortIndex - 2 ].region}: {cohorts[cohortIndex - 2].start_date}</h3>
+            : <h3>Please select a cohort from the dropdown!</h3>
+        }
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input 
@@ -80,7 +95,7 @@ const AddStudentForm = ({handleButton, addNewStudent, cohortIndex}) => {
             value={newStudentObj.social}
             onChange={handleChange}/>
 
-        <label htmlFor="sunSign">What's Your Sign Sign?</label>
+        <label htmlFor="sunSign">What's Your Star Sign?</label>
         <input  
             id="sun_sign"
             name="sun_sign"
@@ -97,7 +112,7 @@ const AddStudentForm = ({handleButton, addNewStudent, cohortIndex}) => {
 
         <input type="submit" />
         
-      <button id="nvm-button" onClick={handleButton}>Nvm!</button>
+      <button className="nvm-button" onClick={handleButton}>Nvm!</button>
       </form>
     </div>
   );

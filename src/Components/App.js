@@ -10,6 +10,7 @@ import StudentCard from "./StudentCard";
 import Footer from "./Footer";
 import { useHistory } from "react-router-dom";
 import Nav from "./Nav";
+import AddStudentForm from "./AddStudentForm";
 
 function App() {
   const [cohortIndex, setCohortIndex] = useState("1");
@@ -97,6 +98,7 @@ function App() {
   }
 
   //DELETE STUDENT TO DATABASE
+
   function deleteStudent(doomedStudentObjIndex) {
     const index = doomedStudentObjIndex;
 
@@ -119,6 +121,7 @@ function App() {
       ) : null}
 
       <Switch>
+
         <Route exact path="/cohorts">
           <StudentContainer
             studentData={students}
@@ -138,6 +141,14 @@ function App() {
             addNewCohort={addNewCohort}
             history={history}
           />
+
+        </Route>
+        <Route exact path="/students/new">
+          <AddStudentForm 
+                addNewStudent={addNewStudent}
+                cohortIndex={cohortIndex} 
+                setCohortIndex={setCohortIndex}
+                cohorts={cohorts}/>
         </Route>
       </Switch>
 
