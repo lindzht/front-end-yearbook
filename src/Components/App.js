@@ -10,6 +10,7 @@ import StudentContainer from "./StudentContainer";
 import Footer from "./Footer";
 import { useHistory } from "react-router-dom";
 import Nav from "./Nav";
+import AddStudentForm from "./AddStudentForm";
 
 function App() {
 
@@ -138,17 +139,22 @@ function App() {
                 setCohortIndex={setCohortIndex} 
                 cohorts={cohorts} 
                 addNewCohort={addNewCohort}
-                history={history}/>
+                history={history} />
         </Route>
         <Route exact path="/cohorts">
           <StudentContainer 
                 studentData={students} 
-                addNewStudent={addNewStudent} 
+                // addNewStudent={addNewStudent} 
                 cohortIndex={cohortIndex}
                 updateStudent={updateStudent}
                 deleteStudent={deleteStudent}
                 deleteCohort={deleteCohort}/>
           <Footer cohorts={cohorts}/>
+        </Route>
+        <Route exact path="/students/new">
+          <AddStudentForm 
+                addNewStudent={addNewStudent}
+                cohortIndex={cohortIndex} />
         </Route>
       </Switch>
       

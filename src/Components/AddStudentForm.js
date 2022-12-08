@@ -1,8 +1,15 @@
 import React, {useState} from "react"; 
+// import { useHistory } from "react-router-dom";
 
 import DropDown from "./DropDown";
 
-const AddStudentForm = ({handleButton, addNewStudent, cohortIndex}) => {
+const AddStudentForm = ({addNewStudent, cohortIndex}) => {
+
+    
+
+    const handleButton = () => {
+        window.history.back();
+    }
     
     const [newStudentObj, setNewStudentObj] = useState ({
             name: "",

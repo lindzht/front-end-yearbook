@@ -1,6 +1,6 @@
 import React from "react";
 
-const DropDown = ({cohortData, setCohortIndex, setHeaderStyle, history}) => {
+const DropDown = ({cohortData, setCohortIndex, history}) => {
   
 
  const optionElements = cohortData.map (cohortData => { 
@@ -12,11 +12,9 @@ const DropDown = ({cohortData, setCohortIndex, setHeaderStyle, history}) => {
     setCohortIndex(index)
     
     if (index > 0) {
-      history.push(`/cohorts`)
-      setHeaderStyle(false)}
+      history.push(`/cohorts`)}
     else {
       history.push(`/`)
-      setHeaderStyle(true)
     }
   }
 

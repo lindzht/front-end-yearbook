@@ -5,7 +5,7 @@ import pencil from "../images/pencil.png"
 // import { useHistory } from "react-router-dom";
 
 
-const LandingPage = ({ setCohortIndex, cohorts, addNewCohort, history }) => {
+const LandingPage = ({ setCohortIndex, cohorts, addNewCohort, history, setHeaderStyle }) => {
   const [showButton, setShowButton] = useState(false);
 //   const [headerStyle, setHeaderStyle] = useState(true)
 //   const history = useHistory();
