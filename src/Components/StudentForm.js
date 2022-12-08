@@ -1,32 +1,33 @@
-import React from "react";
-const StudentForm = ({ handleSaveClick }) => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
+// import React from "react";
 
-    handleSaveClick();
-  };
-  return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter name: </label>
-        <input id="name" />
+// const StudentForm = ({ handleSaveClick }) => {
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
 
-        <label htmlFor="image">Enter Image URL</label>
-        <input id="image" />
+//     handleSaveClick();
+//   };
+//   return (
+//     <div>
+//       <form onSubmit={handleSubmit}>
+//         <label htmlFor="name">Enter name: </label>
+//         <input id="name" />
 
-        <label htmlFor="social">Enter Social</label>
-        <input />
+//         <label htmlFor="image">Enter Image URL</label>
+//         <input id="image" />
 
-        <label htmlFor="sunSign">Enter sun sign</label>
-        <input />
+//         <label htmlFor="social">Enter Social</label>
+//         <input />
 
-        <label htmlFor="bio">Enter bio: </label>
-        <textarea id="bio" name="bio"></textarea>
+//         <label htmlFor="sunSign">Enter sun sign</label>
+//         <input />
 
-        <input type="submit" />
-      </form>
-    </div>
-  );
-};
+//         <label htmlFor="bio">Enter bio: </label>
+//         <textarea id="bio" name="bio"></textarea>
 
-export default StudentForm;
+//         <input type="submit" />
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default StudentForm;
