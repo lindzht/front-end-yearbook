@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 
 // import StudentForm from "./StudentForm";
 import UpdateStudentForm from "./UpdateStudentForm";
@@ -24,8 +25,12 @@ const StudentCard = ({ studentData, updateStudent, deleteStudent }) => {
     deleteStudent(studentData.id)
   }
 
+ 
+
+  
   return (
     <div id="student-card">
+
         {studentData.image ? 
             <img src={studentData.image} alt={studentData.name}/>
             : <img src="https://cdn.shopify.com/s/files/1/1749/6693/products/Plain_A.jpg?v=1652294875" alt={studentData.name}/>}

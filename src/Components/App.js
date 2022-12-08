@@ -1,6 +1,6 @@
 // import './App.css';
 import React, { useState, useEffect } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
 
 import LandingPage from "./LandingPage";
 // import Cohort from "./Cohort";
@@ -109,6 +109,11 @@ function App() {
       .then((newData) => setUpdatedStudents(newData));
   }
 
+
+
+
+
+
   return (
     <div>
       {cohortIndex > 1 ? (
@@ -122,7 +127,7 @@ function App() {
 
       <Switch>
 
-        <Route exact path="/cohorts">
+        <Route path="/cohorts/:id">
           <StudentContainer
             studentData={students}
             addNewStudent={addNewStudent}
@@ -163,21 +168,4 @@ function App() {
 
 export default App;
 
-// return (
-//   <div>
-//     <LandingPage
-//       setCohortIndex={setCohortIndex}
-//       cohorts={cohorts}
-//       addNewCohort={addNewCohort}/>
 
-//     {cohortIndex !== "" ?
-//       <Cohort
-//         studentData={students}
-//         addNewStudent={addNewStudent}
-//         cohortIndex={cohortIndex}
-//         updateStudent={updateStudent}/> : null}
-
-//     <video id='video-background' autoPlay loop muted><source src={backgroundvideo} type='video/mp4' /></video>
-//   </div>
-
-// );

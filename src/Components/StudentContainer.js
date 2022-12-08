@@ -1,7 +1,7 @@
 import React from "react";
 import StudentCard from "./StudentCard";
 import AddStudentCard from "./AddStudentCard";
-import { Route, useHistory } from "react-router-dom";
+import { Route, useHistory, useParams } from "react-router-dom";
 
 const StudentContainer = ({
   studentData,
@@ -12,14 +12,19 @@ const StudentContainer = ({
   deleteCohort,
   setCohortIndex,
 }) => {
+  
+
+
   const history = useHistory();
   const allStudents = studentData.map((studentData) => (
-    <StudentCard
-      key={studentData.id}
-      studentData={studentData}
-      updateStudent={updateStudent}
-      deleteStudent={deleteStudent}
-    />
+    <Route exact path="/cohorts/:id">
+      <StudentCard
+        key={studentData.id}
+        studentData={studentData}
+        updateStudent={updateStudent}
+        deleteStudent={deleteStudent}
+      />
+    </Route>
   ));
 
   const handleDelete = () => {
