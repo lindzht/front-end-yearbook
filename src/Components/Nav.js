@@ -14,7 +14,7 @@ const Nav = ({history, cohortData, setCohortIndex, cohorts})=> {
     return(
         <div id="full-width">
             <h1 onClick={handleRedirectToHomepage}>Yearbook</h1>
-            <h4>Select a cohort</h4>
+            <h4 id="nav-text">Select a cohort</h4>
                 <DropDown 
                 cohortData={cohorts} 
                 setCohortIndex={setCohortIndex} 

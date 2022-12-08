@@ -110,6 +110,7 @@ function App() {
 
   //DELETE STUDENT TO DATABASE
   function deleteStudent (doomedStudentObjIndex){
+    console.log(doomedStudentObjIndex)
       const index = doomedStudentObjIndex
 
       fetch(`http://localhost:9292/students/${index}`, {
@@ -154,7 +155,9 @@ function App() {
         <Route exact path="/students/new">
           <AddStudentForm 
                 addNewStudent={addNewStudent}
-                cohortIndex={cohortIndex} />
+                cohortIndex={cohortIndex} 
+                setCohortIndex={setCohortIndex}
+                cohorts={cohorts}/>
         </Route>
       </Switch>
       

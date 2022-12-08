@@ -20,7 +20,7 @@ const DropDown = ({cohortData, setCohortIndex, history}) => {
 
 
   return (
-    <div>
+    <div id="cohort-drop-down">
         <label htmlFor="cohorts"> 
         <select onChange={handleChange} name='cohorts' id='cohorts'>
                 <option value="" ></option>
