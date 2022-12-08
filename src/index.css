@@ -265,3 +265,12 @@
 }
 
 
+
+#goBack {
+
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    height: 20px;
+    width: 50px;
+}
