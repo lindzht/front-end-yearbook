@@ -152,19 +152,11 @@ function App() {
         </Route>
       </Switch>
 
-      {/* {cohortIndex !== "" ?  
-            <StudentContainer 
-            studentData={students} 
-            addNewStudent={addNewStudent} 
-            cohortIndex={cohortIndex}
-            updateStudent={updateStudent}
-            deleteStudent={deleteStudent}
-            deleteCohort={deleteCohort}/> : null} */}
-
       <video id="video-background" autoPlay loop muted>
         <source src={backgroundvideo} type="video/mp4" />
       </video>
-      <Footer setCohortIndex={setCohortIndex} />
+
+      {cohortIndex > 1 ? (<Footer setCohortIndex={setCohortIndex} />) : null}
     </div>
   );
 }

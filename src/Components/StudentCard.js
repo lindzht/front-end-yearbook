@@ -40,8 +40,8 @@ const StudentCard = ({ studentData, updateStudent, deleteStudent }) => {
                 {studentData.social}
             </div>
             <div id="bio">{studentData.bio}</div>
-            <button onClick={handleClick}>Edit?</button>
-            <button onClick={handleDelete}>Delete me!</button>
+            <button id="edit" onClick={handleClick}>Edit?</button>
+            <button id="delete" onClick={handleDelete}>X</button>
         </div>
       ) : (
         <div id="back-card-form">

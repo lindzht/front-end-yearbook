@@ -129,7 +129,7 @@
 
 #student-list {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 3em;
     max-width: 100%;
 }
@@ -141,11 +141,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 900px;
+    margin: 0 10% 0 15%;
 }
 
 #student-card {
     text-align: center;
-    width: 40em;
+    width: 21em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -166,7 +168,7 @@
 
 #student-card #front-card-text #name {
     font-family: 'Caveat', cursive;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 #student-card img {
@@ -265,13 +267,22 @@
 }
 
 
-#goBack {
+/* NEW: FOOTER  */
+#arrows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 3% 0 3% 9%;
+}
 
-    border: 2px solid black;
-    border-radius: 20px;
-    padding: 20px;
-    height: 20px;
-    width: 50px;
+#back-arrow:hover {
+    margin-left: -10px;
+}
+
+#forward-arrow:hover {
+    margin-right: -10px;
 }
 
 
@@ -282,7 +293,8 @@
 
 /* NEW: FRONT STUDENT CARD  */
 #student-card #front-card-text div {
-    padding: 7px;
+    padding-top: 7px;
+    font-size: 0.9em;
 }
 
 #student-card #front-card-text img {
@@ -293,15 +305,31 @@
     border: none;
     width: 80px;
     background-color: transparent;
-    color: rgb(17, 60, 232);
+    color: rgb(75, 75, 75);
     font-weight: bold;
     font-style: italic;
-    margin: 30px 8px 0 0;
+    position: relative;
+    top: 40px;
+    bottom: 0;
+    left: 20px;
 }
 
+
 #student-card #front-card-text button:hover {
-    background-color: rgb(17, 60, 232);
-    color: white;
+    color: rgb(17, 60, 232);
+}
+
+#student-card #front-card-text #delete {
+    color:rgb(0, 0, 0);
+    position: relative;
+    top: 21px;
+    bottom: 0;
+    left: 60px;
+}
+
+#student-card #front-card-text #delete:hover {
+    color:rgb(17, 60, 232);
+    background-color: transparent;
 }
 
 
@@ -357,7 +385,6 @@
 /* NEW: ADD STUDENT FORM  */
 
 #new-studentform-container{
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
     align-items: center;
