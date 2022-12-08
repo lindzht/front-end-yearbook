@@ -1,27 +1,24 @@
 import React, {useState} from "react";
-import StudentForm from "./StudentForm";
+import AddStudentForm from "./AddStudentForm";
 
-const AddStudentCard = ({ studentData }) => {
+const AddStudentCard = ({addNewStudent, cohortIndex}) => {
 
-    const [turnBack, setTurnBack] = useState(true)
-
-    const handleEditClick = () => {
-        setTurnBack(true)
+    const [flipCard, setFlipCard] = useState(true)
+    const handleButton = ()=> {
+        setFlipCard(!flipCard)
     }
 
-
 return (
-        <div id="student-card">
-            {turnBack? 
+        <div id="add-student-container">
+            {flipCard ? 
                 <div id="add-front-card">
-                        
-                    <button onClick={handleEditClick}>Add Someone!</button>
+                    <h3 onClick={handleButton}>Add <br />student!</h3>
                 </div>
             : 
              <div id="add-back-card">
-
+                 <AddStudentForm handleButton={handleButton} addNewStudent={addNewStudent} cohortIndex={cohortIndex} />
              </div>
-            };
+            }
         </div>       
     )
    

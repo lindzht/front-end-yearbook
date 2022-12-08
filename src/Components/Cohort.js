@@ -1,19 +1,23 @@
-import React, {useState, useEffect} from'react';
+// import React from'react';
 
-import StudentContainer from "./StudentContainer"
-import AddStudent from "./StudentForm"
+// import StudentContainer from "./StudentContainer"
+// import AddStudentCard from './AddStudentCard';
 
 
-const Cohort = ({studentData}) =>{
+// const Cohort = ({studentData, addNewStudent, cohortIndex, updateStudent}) =>{
     
-    return(
-        <div>
-            <h1>Cohort Page</h1>
-            <StudentContainer studentData={studentData}  />
-        </div>
-    )
+//     return(
+//         <div>
+//             <AddStudentCard 
+//                 addNewStudent={addNewStudent} 
+//                 cohortIndex={cohortIndex}/>
+//             <StudentContainer 
+//                 studentData={studentData}
+//                 updateStudent={updateStudent}  />
+//         </div>
+//     )
 
 
-}
+// }
 
-export default Cohort;
+// export default Cohort;
