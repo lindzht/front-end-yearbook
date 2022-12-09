@@ -292,6 +292,9 @@
     cursor: grab;
 }
 
+#forward-arrow-hide {
+    display: none;
+}
 
 /* NEW: DROPDOWN */
 #cohort-drop-down input{
