@@ -38,7 +38,7 @@ const AddStudentForm = ({addNewStudent, cohortIndex, setCohortIndex, cohorts}) =
         })
         addNewStudent(newStudentObj)
         setCohortIndex(1)
-        history.push(`/`) 
+        window.history.back() 
     };
 
     const handleChange = (e) => {

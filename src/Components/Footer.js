@@ -3,12 +3,13 @@ import { useHistory } from "react-router-dom";
 import leftarrow from "../images/leftarrow.png"
 import rightarrow from "../images/rightarrow.png"
 
-const Footer = ({ setCohortIndex }) => {
+const Footer = ({ setCohortIndex, cohortIndex }) => {
 
   const history = useHistory();
+
   const handleGoBack = () => {
-    setCohortIndex(1);
-    history.goBack();
+    window.history.back();
+    history.push(`/cohorts/${cohortIndex - 1}`) 
   };
 
 //   const handleForward = () => {

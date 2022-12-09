@@ -161,7 +161,7 @@ function App() {
         <source src={backgroundvideo} type="video/mp4" />
       </video>
 
-      {cohortIndex > 1 ? (<Footer setCohortIndex={setCohortIndex} />) : null}
+      {cohortIndex > 1 ? (<Footer cohortIndex={cohortIndex} setCohortIndex={setCohortIndex} />) : null}
     </div>
   );
 }
