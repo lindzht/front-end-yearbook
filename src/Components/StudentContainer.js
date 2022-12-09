@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import StudentCard from "./StudentCard";
 import AddStudentCard from "./AddStudentCard";
 import { Route, useHistory, useParams } from "react-router-dom";
@@ -12,6 +12,14 @@ const StudentContainer = ({
   deleteCohort,
   setCohortIndex,
 }) => {
+
+const params = useParams();
+
+    useEffect(() => {
+        setCohortIndex(params.id)
+    }, [])
+
+
   const history = useHistory();
   const allStudents = studentData.map((studentData) => (
     <Route exact path="/cohorts/:id">

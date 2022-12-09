@@ -53,11 +53,12 @@
 
 #landing-page h5:hover {
     color: rgb(42, 6, 221);
+    cursor: grab;
 }
 
 #add-cohort-form input[type="text"]{
     border: none;
-    background-color: rgb(244, 246, 255);
+    background-color: white;
     padding: 0.3em;
     width: 100%;
     margin: 3px;
@@ -79,7 +80,8 @@
 }
 
 #add-cohort-button:hover {
-    color: rgb(17, 60, 232)
+    color: rgb(17, 60, 232);
+    cursor: grab;
 }
 
 @keyframes font-color {
@@ -103,9 +105,9 @@
 #full-width h1 {
     position: fixed;
     font-family: 'Satisfy', cursive;
-    font-size: 12em;
-    left: -200px;
-    top: 80px;
+    font-size: 12.8em;
+    left: -230px;
+    top: 81px;
     animation-name: font-color;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -117,12 +119,13 @@
 #full-width h4 {
     font-size: 1.2em;
     font-style: italic;
-    margin: 1% 1% 1% 30%;
+    margin: 1% 1% 1% 38%;
 }
 
 #full-width h5 {
     display: none;
 }
+
 
 
 /* STUDENT LIST */
@@ -136,7 +139,7 @@
 
 /* STUDENT CARDS */
 
-#student-container {
+/* #student-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -147,18 +150,18 @@
 
 #student-card {
     text-align: center;
-    width: 21em;
+    width: 22em;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: rgba(240, 248, 255, 0.777);
-    box-shadow: 1px 1px 1em rgba(152, 183, 211, 0.526);
+    box-shadow: 2px 2px 1em rgba(152, 183, 211, 0.678);
     padding: 1em;
 }
 
 #student-card:hover {
-    box-shadow: 1px 1px 1em rgb(142, 172, 199);
+    box-shadow: 1px 1px 1em rgb(131, 160, 184);
 
 }
 
@@ -168,7 +171,7 @@
 
 #student-card #front-card-text #name {
     font-family: 'Caveat', cursive;
-    font-size: 2em;
+    font-size: 2.3em;
 }
 
 #student-card img {
@@ -187,7 +190,7 @@
 #back-card-form form input { 
     color: grey;
     font-style: italic;
-};
+}; */
 
 
 /* BUTTONS ON STUDENT CONTAINER */
@@ -222,6 +225,7 @@
 
 #delete-cohort-button:hover {
     opacity: 100%;
+    cursor: grab;
 }
 
 /* ADD NEW STUDENT CARD */
@@ -251,6 +255,7 @@
 
 #add-front-card:hover {
     opacity: 100%;
+    cursor: grab;
 }
 
 #add-back-card form {
@@ -279,10 +284,12 @@
 
 #back-arrow:hover {
     margin-left: -10px;
+    cursor: grab;
 }
 
 #forward-arrow:hover {
     margin-right: -10px;
+    cursor: grab;
 }
 
 
@@ -292,12 +299,12 @@
 }
 
 /* NEW: FRONT STUDENT CARD  */
-#student-card #front-card-text div {
+/* #student-card #front-card-text div {
     padding-top: 7px;
     font-size: 0.9em;
-}
+} */
 
-#student-card #front-card-text img {
+/* #student-card #front-card-text img {
    margin-right: 5px;
 }
 
@@ -309,7 +316,7 @@
     font-weight: bold;
     font-style: italic;
     position: relative;
-    top: 40px;
+    top: 29px;
     bottom: 0;
     left: 20px;
 }
@@ -322,7 +329,7 @@
 #student-card #front-card-text #delete {
     color:rgb(0, 0, 0);
     position: relative;
-    top: 21px;
+    top: 11px;
     bottom: 0;
     left: 60px;
 }
@@ -330,46 +337,174 @@
 #student-card #front-card-text #delete:hover {
     color:rgb(17, 60, 232);
     background-color: transparent;
+} */
+
+/* NEW NEW CARD */
+#student-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 900px;
+    margin: 3% 28% 0 23%;
 }
+
+#student-card {
+    text-align: center;
+    width: 16em;
+    background-color: rgba(240, 248, 255, 0.777);
+    box-shadow: 2px 2px 1em rgba(152, 183, 211, 0.678);
+    border: solid 3.5px rgba(152, 183, 211, 0.678);
+    padding: 1em;
+    border-radius: 5%;
+}
+
+#student-card #card-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+/* #student-card #card-display #card-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100px;
+    margin-top: 2em;
+} */
+
+#student-card #card-display #card-buttons {
+    position: relative;
+    bottom: -40px;
+    right: 3px;
+}
+
+#student-card #card-display #edit {
+    margin-right: 50px;
+}
+
+#student-card #card-display #card-buttons button{
+    color: rgb(160, 160, 160);
+    border: none;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+
+#student-card #card-display #card-buttons button:hover{
+   color: rgb(17, 60, 232);
+   font-weight: bold;
+   cursor: grab;
+}
+
+
+
+#student-card #card-display #name {
+    font-size: 2.4em;
+    font-family: 'Caveat', cursive;
+    margin-bottom: 3px;
+}
+
+#student-card #card-display #social {
+    margin-bottom: 20px;
+}
+
+#student-card #card-display #bio {
+    font-size: 0.8em;
+    padding: 0 1em 0 1em;
+}
+
+#student-card #card-display #name:hover {
+    color: rgb(17, 60, 232);
+    font-weight: bold;
+    cursor: grab;
+}
+
+#student-card:hover {
+    box-shadow: 1px 1px 1em rgb(105, 133, 156);
+    cursor: grab;
+
+}
+
+#front {
+    max-height: 18.3em;
+}
+
+#front #name {
+    font-family: 'Caveat', cursive;
+    font-size: 2.7em;
+    color: black;
+    position: relative;
+    top: -0.18em;
+}
+
+#front #name:hover {
+    color: rgb(17, 60, 232);
+    cursor: grab;
+}
+
+#student-card #front img {
+    max-width: 100%;
+    object-fit: cover;
+    min-height: 250px;
+}
+
+#student-card img {
+    width: 500px;
+    margin-right: 8px;
+}
+
+
+#back-card-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 0.8em;
+}
+
+#back-card-form form input { 
+    color: grey;
+    font-style: italic;
+    border: none;
+    width: 100%;
+    margin-bottom: 5px;
+};
+
+
 
 
 
 /* NEW: UPDATE FORM  */
 
-#back-card-form form {
-    font-size: 0.9em;
-    margin: 1em 4.8em 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-style: italic;
-}
-
 #back-card-form form input{
     border: none;
     padding: 0.3em;
-    width: 100%;
-    margin-bottom: 8px;
+    width: 80%;
+    margin-bottom: 10em;
     font-size: 0.9em;
 }
 
 #back-card-form form textarea {
     border: none;
     width: 100%;
-    
 }
 
 #back-card-form form input[type="submit"] {
     border: none;
     width: 20%;
+    padding: 0.3em;
     background-color: rgb(160, 160, 160);
     color: white;
-    margin-top: 5%;
+    margin: 5% 0 3% 0;
 }
 
 #back-card-form form input[type="submit"]:hover {
     background-color: rgb(17, 60, 232);
+    cursor: grab;
 }
 
 
@@ -404,7 +539,7 @@
     justify-content: center;
     width: 30em;
     background-color: rgba(240, 248, 255, 0.777);
-    box-shadow: 1px 1px 1em rgba(152, 183, 211, 0.526);
+    box-shadow: 1px 1px 1em rgba(152, 183, 211, 0.447);
     padding: 1em;
     font-style: italic;
 }
@@ -438,6 +573,7 @@
 
 #new-studentform-container form input[type="submit"]:hover {
     background-color: rgb(17, 60, 232);
+    cursor: grab;
 }
 
 .nvm-button {
@@ -453,8 +589,14 @@
     background-color: rgb(17, 60, 232);
 }
 
+
 #myBar {
-
-
     background-color: #4CAF50!important;
+}
+
+
+/* NEW NAV */
+
+#full-width {
+    margin: 2% -1.5% -2% 0;
 }
