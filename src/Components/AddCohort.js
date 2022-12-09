@@ -1,69 +1,80 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
+import ProgressBar from "./ProgressBar";
 
+const AddButton = ({ addNewCohort }) => {
+  const [display, setDisplay] = useState(false);
+  const [newCohortObj, setNewCohortObj] = useState({
+    region: "",
+    start_date: "",
+  });
 
-const AddButton = ({addNewCohort}) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
+    setDisplay(true);
+    setTimeout(() => {
+      setDisplay(false);
+    }, 800);
 
-    const [display, setDisplay] = useState(false)
-    const [newCohortObj, setNewCohortObj] = useState ({
-        region: "",
-        start_date: ""
-    })
+    addNewCohort(newCohortObj);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setDisplay(true)
-        setTimeout(() => {
-            setDisplay(false)
-        }, 800)
+    setNewCohortObj({
+      region: "",
+      start_date: "",
+    });
+  };
 
-        addNewCohort(newCohortObj)
+  const handleChange = (e) => {
+    const key = e.target.name;
+    const value = e.target.value;
 
-        setNewCohortObj({
-            region: "",
-            start_date: ""
-        });
-        
-    }
+    setNewCohortObj({
+      ...newCohortObj,
+      [key]: value,
+    });
+  };
+    
+  const testData = [
+    { bgcolor: "#6a1b9a", completed: 60 },
+    { bgcolor: "#00695c", completed: 30 },
+    { bgcolor: "#ef6c00", completed: 53 },
+  ];
+    
+  const [completed, setCompleted] = useState(0);
 
-    const handleChange = (e) => {
-        const key = e.target.name;
-        const value = e.target.value;
+  useEffect(() => {
+    setInterval(() => setCompleted(Math.floor(Math.random() * 100) + 1), 2000);
+  }, []);
 
-        setNewCohortObj({ 
-            ...newCohortObj,
-            [key]: value
-        });
-    };
-   
+  return (
+    <div id="add-cohort-form">
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="region"
+          placeholder="Region (East, West, South)"
+          value={newCohortObj.region}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="start_date"
+          placeholder="Start Date (MM-DD-YYYY)"
+          value={newCohortObj.start_date}
+          onChange={handleChange}
+        />
+        <input
+          type="submit"
+          id="add-cohort-button"
+          name="add-cohort"
+          value="Submit"
+        />
+      </form>
+      {display ? <h3>Added to DropDown</h3> : null}
 
-
-   return(
-    <div id='add-cohort-form'>
-        <form onSubmit = {handleSubmit}>
-            {/* <label htmlFor="new-cohort">Want to add a new cohort?</label><br></br> */}
-            
-            <input 
-                type="text" 
-                name="region"
-                placeholder="Region (East, West, South)"
-                value={newCohortObj.region}
-                onChange={handleChange} />
-             <input 
-                type="text" 
-                name="start_date"
-                placeholder="Start Date (MM-DD-YYYY)"
-                value={newCohortObj.start_date}
-                onChange={handleChange} />
-            <input 
-                type="submit" 
-                id="add-cohort-button" 
-                name="add-cohort" 
-                value="Submit" />
-        </form >
-        {display ? <h3>Added to DropDown</h3> : null}
+        <ProgressBar  bgcolor={"#6a1b9a"} completed={completed}/>
     </div>
-   )
-}
+  );
+};
 
 export default AddButton;
