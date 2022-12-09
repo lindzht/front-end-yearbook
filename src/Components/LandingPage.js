@@ -35,9 +35,9 @@ const LandingPage = ({ setCohortIndex, cohorts, addNewCohort, history, setHeader
         history={history}
       />
 
-      <h5 onClick={handleButton}>Want to add a new cohort?</h5>
+      <h5 style={{cursor: 'pointer'}} onClick={handleButton}>Want to add a new cohort?</h5>
       {showButton ? <AddCohort addNewCohort={addNewCohort} /> : null}
-      <img style={{ width: 100, paddingLeft: 200}} src={pointer} alt="pencil" />
+      {!showButton ? <img style={{ width: 100, paddingLeft: 200 }} src={pointer} alt="pointer" />: null} 
     </div>
   );
 };

@@ -12,13 +12,13 @@ const StudentContainer = ({
   deleteCohort,
   setCohortIndex,
 }) => {
-  
 
-    const params = useParams();
+const params = useParams();
 
     useEffect(() => {
         setCohortIndex(params.id)
     }, [])
+
 
   const history = useHistory();
   const allStudents = studentData.map((studentData) => (
@@ -58,15 +58,3 @@ const StudentContainer = ({
 };
 
 export default StudentContainer;
-
-// import React from "react";
-// import StudentCard from "./StudentCard";
-
-// const StudentContainer = ({ studentData }) => {
-//   const allStudents = studentData.map((studentData) => (
-//     <StudentCard key={studentData.id} studentData={studentData} />
-//   ));
-//   return <div id="student-list">{allStudents}</div>;
-// };
-
-// export default StudentContainer;

@@ -12,16 +12,16 @@ const Footer = ({ setCohortIndex, cohortIndex }) => {
     history.push(`/cohorts/${cohortIndex - 1}`) 
   };
 
-//   const handleForward = () => {
-//     setCohortIndex(1);
-//     history.goBack();
-//   };
+  const handleForward = () => {
+    setCohortIndex(1);
+    history.goForward();
+  };
 
   return (
     <div id="footer">
       <div id="arrows">
         <img id="back-arrow" onClick={handleGoBack} style={{width: 50}} src={leftarrow} alt="back"/>
-        <img id="forward-arrow" style={{width: 50}} src={rightarrow} alt="back"/>
+        <img id="forward-arrow" onClick={handleForward} style={{width: 50}} src={rightarrow} alt="back"/>
       </div>
     </div>
   );
