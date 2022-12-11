@@ -72,7 +72,12 @@ const AddButton = ({ addNewCohort }) => {
       </form>
       {display ? <h3>Added to DropDown</h3> : null}
 
-        <ProgressBar  bgcolor={"#6a1b9a"} completed={completed}/>
+
+   
+      {/* <ProgressBar /> */}
+
+
+       
     </div>
   );
 };

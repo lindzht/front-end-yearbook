@@ -21,8 +21,8 @@ const Footer = ({ setCohortIndex, cohortIndex, cohorts }) => {
     } 
   };
 
-  console.log('arrray' + cohorts.length)
-  console.log('index ' + cohortIndex)
+//   console.log('arrray' + cohorts.length)
+//   console.log('index ' + cohortIndex)
 
   const handleForward = () => {
 
